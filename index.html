@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Un guide emoji pour vos messages de commit !">
+  <meta name="author" content="Zied ZAIEM">
+  <title>GitMoji</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body
+    {
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        background: #f4f5f7;
+        font-family: 'Open Sans', sans-serif !important;
+        text-align: center;
+        color: #8898aa !important;
+        font-size: .875rem;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0.3rem;
+      margin-bottom: 0.4rem;
+      background-color: #5e72e4 !important;
+      color: white;
+    }
+
+      main {
+        width: 100%;
+      }
+
+      #emojis-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .card {
+        padding: 0.4rem;
+        width: 11.5%;
+      }
+
+
+
+      .card button {
+        color: white;
+        padding: 0.3rem;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+        transition: all .15s ease;
+        letter-spacing: .025em;
+        text-transform: uppercase;
+        will-change: transform;
+        display: block;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid transparent;
+        user-select: none;
+        border-radius: .3rem;
+        box-sizing: border-box;
+
+      }
+
+      .card button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+      }
+
+      .card button span.icon {
+        font-size: 2.2rem;
+      }
+
+      .card button span.badge {
+        font-size: 0.7rem;
+        margin-top: 0.3rem;
+        color:white;
+        background-color: rgba(0, 0, 0, .4);
+        padding-right: .875em;
+        padding-left: .875em;
+        border-radius: 10rem;
+        line-height: 1;
+        display: inline-block;
+        padding: .35rem .375rem;
+        text-align: center;
+        vertical-align: baseline;
+        white-space: nowrap;
+        font-family: 'Open Sans', sans-serif !important;
+      }
+
+
+  </style>
+</head>
+
+<body>
+
+    <header>
+      <h1 id="title">GitMoji</h1>
+    </header>
+
+    <main>
+        <div id="emojis-list"></div>
+    </main>
+
+    <br/>
+    <br/>
+    <footer>
+      @ 2020 <a href="https://www.ziedzaiem.com" target="_blank">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank">@ziedzaiem</a> | <a href="https://gitmoji.carloscuesta.me/" target="_blank">Inspiré de <b>gitmoji</b></a> | v0.0.1
+    </footer>
+    
+    <br/>
+
+    <script>
+    var emojis = [
+
+        // Ligne 1 : Opérations Git communes
+        { name:"", icon:"🎉", color: "#f74d5f", text:"Initial commit"},
+        { name:"", icon:"✨", color: "#ffe55f", text:"Nouvelle Fonctionnalité"},
+        { name:"", icon:"⚡️", color: "#40C4FF", text:"Amélioration Perfs"},
+        { name:"", icon:"💡", color: "#ffce49", text:"Nouvelle idée"},
+
+        // Bugs 
+        { name:"", icon:"🐛", color: "#8cd842", text:"Bug Fix"},
+        { name:"", icon:"🚑", color: "#fb584a", text:"Bug Critique"},
+        { name:"", icon:"✏️", color: "#ffce49", text:"Fix Typo"},
+        { name:"", icon:"🔧", color: "#d9e3e8", text:"Tuning"},
+
+        // Ligne 2 Conf
+        { name:"", icon:"⚙️", color: "#FFC400", text:"Configuration"},
+        { name:"", icon:"👨‍🔧", color: "#64B5F6", text:"Intégration Continue"},
+        { name:"", icon:"🚀", color: "#00a9f0", text:"Déploiement"},
+
+        // Nettoyage
+        { name:"", icon:"🚚", color: "#ef584a", text:"Déplacer des fichiers"},
+        { name:"", icon:"♻️", color: "#77e856", text:"Refactoring"},
+
+        // Danger
+        { name:"", icon:"⏪", color: "#56d1d8", text:"Rollback"},
+        { name:"", icon:"🔥", color: "#ff9d44", text:"Supp Code / Fichiers"},
+        { name:"", icon:"🗑️", color: "#d9e3e8", text:"Poubelle"},
+
+        // Ligne 3 Doc & texte
+        { name:"", icon:"📝", color: "#00E676", text:"Documentation"},
+        { name:"", icon:"💬", color: "#CEDAE6", text:"Change Label"},
+
+        // Release
+        { name:"", icon:"🔖", color: "#80DEEA", text:"Versioning"},
+        { name:"", icon:"📦", color: "#fdd0ae", text:"Package"},
+
+        { name:"", icon:"🚧", color: "#FFB74D", text:"Work in progress"},
+        { name:"", icon:"⚠️", color: "#FFC400", text:"Avertissement"},
+        { name:"", icon:"🚨", color: "#536dfe", text:"Alerte"},
+        { name:"", icon:"💥", color: "#f94f28", text:"Big Bang"},
+
+
+        // Ligne 4
+        // Logs
+        { name:"", icon:"🔊", color: "#23b4d2", text:"Plus de logs"},
+        { name:"", icon:"🔇", color: "#e6ebef", text:"Moins de logs"},
+
+        // Tests
+        { name:"", icon:"✅", color: "#77e856", text:"Ajouter des Tests"},
+        { name:"", icon:"🆗", color: "#00b1fb", text:"OK"},
+
+        { name:"", icon:"🔒", color: "#ffce49", text:"Sécurité"},
+        { name:"", icon:"🚩", color: "#ffce49", text:"Flag"},
+        { name:"", icon:"💩", color: "#a78674", text:"🧻 🚽"},
+        { name:"", icon:"📄", color: "#d9e3e8", text:"Licence"},
+
+
+        // Ligne 5 
+        // Plateforme
+        { name:"", icon:"🐳", color: "#00cbe8", text:"Docker"},
+        { name:"", icon:"☸️", color: "#40c4ff", text:"Kubernetes"},
+        { name:"", icon:"🐧", color: "#fa9a3f", text:"Linux"},
+
+        // Dépendances
+        { name:"", icon:"➕", color: "#00E676", text:"Ajouter dépendances"},
+        { name:"", icon:"➖", color: "#EF5350", text:"Supp dépendances"},
+        { name:"", icon:"⬆️", color: "#00E676", text:"Up dépendances"},
+        { name:"", icon:"⬇️", color: "#EF5350", text:"Down dépendances"},
+        { name:"", icon:"📌", color: "#39c2f1", text:"Fix dépendances"},
+
+        // Ligne 6 Web
+        { name:"", icon:"🎨", color: "#ff7281", text:"Changer Couleurs"},
+        { name:"", icon:"💄", color: "#80DEEA", text:"UI / Fichiers de Style"},
+        { name:"", icon:"🔍", color: "#ffe55f", text:"Optimisation SEO"},
+        { name:"", icon:"🌐", color: "#E7F4FF", text:"Traduction"},
+
+        { name:"", icon:"📈", color: "#CEDAE6", text:"Analytics"},
+        { name:"", icon:"💫", color: "#ffdb3a", text:"Animation"},
+        { name:"", icon:"📷", color: "#00a9f0", text:"Ajouter Ico/Img"},
+        { name:"", icon:"♿️", color: "#00b1fb", text:"Accessibilité"},
+
+        //Ligne 7 Code
+        { name:"", icon:"📐", color: "#ffe55f", text:"Architecture"},
+        { name:"", icon:"🙈", color: "#8bdfe7", text:".gitignore"},
+        { name:"", icon:"⚗️", color: "#7f39fb", text:"Tester fonctionnalité"},
+        { name:"", icon:"🔗", color: "#d9e3e8", text:"Link"},
+
+        { name:"", icon:"📧", color: "#ff7281", text:"Mail"},
+        { name:"", icon:"📱", color: "#40c4ff", text:"Smartphone"},
+        { name:"", icon:"🤖", color: "#39c2f1", text:"Bot"},
+        { name:"", icon:"👽", color: "#c5e763", text:"API Externe"},
+
+        // Ligne 8 Autres
+
+        { name:"", icon:"🍻", color: "#fbb64b", text:"Ivre, il code"},
+        { name:"", icon:"🗃️", color: "#c5e763", text:"Base de Données"},
+        { name:"", icon:"🔀", color: "#56d1d8", text:"Merge Branche"},
+        { name:"", icon:"🤡", color: "#ff7281", text:"Joker"},
+
+        { name:"", icon:"🆕", color: "#00b1fb", text:"New"},
+        { name:"", icon:"🆘", color: "#f94f28", text:"SOS"},
+        { name:"", icon:"💤", color: "#8bdfe7", text:"Zzz"},
+        { name:"", icon:"🌍", color: "#d9e3e8", text:"World"},
+
+        
+    
+        //{ name:"", icon:"🎨", color: "", text:""},
+    ];
+
+    function insertEmojis(text) {
+        var html= "";
+        for(var i=0;i<emojis.length;i++) {
+
+                html += '<div class="card">';
+                html += `<button tabindex="${i}" onClick="copyToClipboard('${emojis[i].icon}', '${emojis[i].text}');" style="background-color: ${emojis[i].color};border-color: ${emojis[i].color};">`;
+                html += `<span class="icon">${emojis[i].icon}</span>`;
+                html += '<br/>';
+                html += `<span class="badge">${emojis[i].text}</span>`;
+                html += '</button>';
+                html += '</div>';
+
+        }
+
+        document.getElementById("emojis-list").innerHTML = html;
+    };
+
+    insertEmojis();
+
+    function copyToClipboard(icon, text) {
+      setTimeout(function(){
+          var selected = false;
+          var el = document.createElement('textarea');
+          el.value = icon;
+          el.setAttribute('readonly', '');
+          el.style.position = 'absolute';
+          el.style.left = '-9999px';
+          document.body.appendChild(el);
+          if (document.getSelection().rangeCount > 0) {
+              selected = document.getSelection().getRangeAt(0)
+          }
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          if (selected) {
+              document.getSelection().removeAllRanges();
+              document.getSelection().addRange(selected);
+          }
+
+          document.getElementById("title").innerHTML = `${icon} (${text}) copié!` ;
+
+          setTimeout(function(){
+            document.getElementById("title").innerHTML = "GitMoji";
+          }, 2000);
+      }, 200);
+
+};
+
+    </script>
+</body>
+</html>
