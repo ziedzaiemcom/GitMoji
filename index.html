@@ -24,13 +24,23 @@
         font-size: .875rem;
     }
 
-    h1 {
-      margin: 0;
-      padding: 0.3rem;
-      margin-bottom: 0.4rem;
-      background-color: #5e72e4 !important;
-      color: white;
-    }
+      h1 {
+        margin: 0;
+        padding: 0.3rem;
+        margin-bottom: 0.4rem;
+        background-color: #5e72e4 !important;
+        color: white;
+      }
+
+      header a {
+        position: absolute;
+        right: 15px;
+        color: white;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        text-decoration: none;
+      }
+
 
       main {
         width: 100%;
@@ -106,7 +116,8 @@
 <body>
 
     <header>
-      <h1 id="title">GitMoji</h1>
+      <h1 id="title">GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank">🐱 Fork me on Github ↗️</a></h1>
+      
     </header>
 
     <main>
@@ -116,7 +127,7 @@
     <br/>
     <br/>
     <footer>
-      @ 2020 <a href="https://www.ziedzaiem.com" target="_blank">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank">@ziedzaiem</a> | <a href="https://gitmoji.carloscuesta.me/" target="_blank">Inspiré de <b>gitmoji</b></a> | v0.0.1
+      @ 2020 <a href="https://www.ziedzaiem.com" target="_blank">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank">@ziedzaiem</a> | Inspiré de <a href="https://gitmoji.carloscuesta.me/" target="_blank">gitmoji</a> par <a href="https://github.com/carloscuesta/" target="_blank">Carlos Cuesta</a> | v0.0.2
     </footer>
     
     <br/>
@@ -273,7 +284,7 @@
           document.getElementById("title").innerHTML = `${icon} (${text}) copié!` ;
 
           setTimeout(function(){
-            document.getElementById("title").innerHTML = "GitMoji";
+            document.getElementById("title").innerHTML = 'GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank">🐱 Fork me on Github ↗️</a>';
           }, 2000);
       }, 200);
 
