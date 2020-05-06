@@ -97,12 +97,13 @@
         margin-top: 0.3rem;
         color:white;
         background-color: rgba(0, 0, 0, .4);
-        padding-right: .875em;
-        padding-left: .875em;
         border-radius: 10rem;
         line-height: 1;
         display: inline-block;
-        padding: .35rem .375rem;
+        padding-top: 0.35rem;
+        padding-right: .875em;
+        padding-bottom: 0.35rem;
+        padding-left: .875em;
         text-align: center;
         vertical-align: baseline;
         white-space: nowrap;
@@ -116,7 +117,7 @@
 <body>
 
     <header>
-      <h1 id="title">GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank">🐱 Fork me on Github ↗️</a></h1>
+      <h1 id="title">GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank" rel="noopener noreferrer">🐱 Fork me on Github ↗️</a></h1>
       
     </header>
 
@@ -127,7 +128,7 @@
     <br/>
     <br/>
     <footer>
-      @ 2020 <a href="https://www.ziedzaiem.com" target="_blank">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank">@ziedzaiem</a> | Inspiré de <a href="https://gitmoji.carloscuesta.me/" target="_blank">gitmoji</a> par <a href="https://github.com/carloscuesta/" target="_blank">Carlos Cuesta</a> | v0.0.2
+      @ 2020 <a href="https://www.ziedzaiem.com" target="_blank" rel="noopener noreferrer">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank" rel="noopener noreferrer">@ziedzaiem</a> | Inspiré de <a href="https://gitmoji.carloscuesta.me/" target="_blank" rel="noopener noreferrer">gitmoji</a> par <a href="https://github.com/carloscuesta/" target="_blank" rel="noopener noreferrer">Carlos Cuesta</a> | v0.0.2
     </footer>
     
     <br/>
@@ -284,7 +285,7 @@
           document.getElementById("title").innerHTML = `${icon} (${text}) copié!` ;
 
           setTimeout(function(){
-            document.getElementById("title").innerHTML = 'GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank">🐱 Fork me on Github ↗️</a>';
+            document.getElementById("title").innerHTML = 'GitMoji <a href="https://github.com/ziedzaiem/GitMoji" target="_blank" rel="noopener noreferrer">🐱 Fork me on Github ↗️</a>';
           }, 2000);
       }, 200);
 
