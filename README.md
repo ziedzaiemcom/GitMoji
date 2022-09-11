@@ -7,6 +7,7 @@ Un guide emoji pour vos messages de commit !
 
 ## Docker
 
+- Github : https://github.com/ziedzaiemcom/GitMoji
 - Docker Hub : https://hub.docker.com/r/ziedzaiemcom/gitmoji
 
 You can use [Dive](https://github.com/wagoodman/dive) to inspect Docker image contents.
