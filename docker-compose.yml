@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  gitmoji:
+    build: .
+    container_name: gitmoji
+    restart: unless-stopped
+    ports:
+      - 8888:80
